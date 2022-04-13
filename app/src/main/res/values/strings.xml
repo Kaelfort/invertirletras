@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">11 abril</string>
+    <string name="hint_palabra">"Ingrese una palabra: "</string>
+    <string name="btn_procesar">Procesar</string>
+</resources>
