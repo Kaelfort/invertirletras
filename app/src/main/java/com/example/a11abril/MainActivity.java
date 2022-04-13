@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     //atributos-variables
     private TextView txtResultado;
+    private TextView txtAviso;
     private EditText etPalabra;
     private Button btnProcesar;
 
@@ -50,13 +51,24 @@ public class MainActivity extends AppCompatActivity {
         //Netamente codigo java
         //palabra = new StringBuilder(palabra).reverse().toString();
         String invertido="";
+
+        String verific=this.palabra;
         //la cadena sra una array, donde la cadena de cada letra estara en un array
         //los strings tinene un metodo que les permite devolver una letra como si fuera la posiscion de un array
         for (int i = this.palabra.length()-1; i >=0 ; i--) {
             invertido += this.palabra.charAt(i);
             
         }
+        txtAviso.setText(verific);
+        if(this.palabra.equals(invertido))
+        {
+            txtAviso.setText("la palabra es palindroma");
+        }else{
+            txtAviso.setText("la palabra no es palindroma");
+        }
+
         txtResultado.setText(invertido);
+
     }
 
     private void recibirInformacion() {
@@ -66,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void inicializarVistas() {
         txtResultado = findViewById(R.id.txtResultado);
+        txtAviso = findViewById(R.id.txtaviso);
         etPalabra = findViewById(R.id.etPalabra);
         etPalabra = findViewById(R.id.etPalabra);
         btnProcesar = findViewById(R.id.btnProcesar);

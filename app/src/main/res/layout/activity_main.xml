@@ -38,4 +38,16 @@
         app:layout_constraintStart_toStartOf="@+id/txtResultado"
         app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
 
+    <TextView
+        android:id="@+id/txtaviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnProcesar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:layout_constraintVertical_bias="0.48" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
